@@ -1,0 +1,118 @@
+<!DOCTYPE html> 
+<html> 
+  <head> 
+	  <meta name="viewport" content="width=device-width, initial-scale=1">
+	  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+      <meta http-equiv="Expires" content="0" />
+
+	  <link rel="stylesheet" href="assets/css/jquery.mobile-1.4.5.min.css" /> 
+	  <link rel="stylesheet" href="assets/css/style.css" />
+	 
+	  <script src="assets/js/jquery-1.11.1.min.js"></script>
+	  <script src="assets/js/jquery.mobile.min.js"></script>
+	  <script src="assets/js/jquery.validate.min.js"></script>
+	  <script src="assets/js/room.js"></script>
+ 	
+	  <title>Room Expenditures</title>	  
+	
+</head> 
+
+<body >
+<div data-role="page" id="page_search" class="main-bg">
+
+	
+	<div class="aqua">
+		<a data-role="header" class="logo">
+			<!-- <p><img src="assets/images/logo12.jpg" title="" alt="" /></p> -->
+    		<h6><span data-localize="aqua-head">Room Expenditures</span></h6>
+		</a>
+
+  		<div data-role="main" class="ui-content">
+  		
+  		<div class="loading_div" style="display:none;"><img src="assets/images/ajax-loader.gif"/>
+    	<p>Content loading. Please wait</p>
+    </div>
+   
+  	<div data-role="main" class="ui-content data_div">
+       
+		<h3>Details</span>
+		<a href="#" data-ajax="false" style='float:right;margin-top: 1px;'id='add_contact' class="ui-btn ui-btn-icon-left ui-icon-plus login-one-btn enhance">Add</a></h3>
+<!-- style="display:none;" -->
+		<div id="add-expnd">
+			<form action="" method="post" name="add-expnd-form" id="ad-expnd-form">
+
+				 <label class="label-ui" data-localize="name" >Descprition</label>
+		         <input type="text" name="desc" id="desc"  data-localize="name" value="" placeholder="Descprition">
+
+		         <label class="label-ui" data-localize="name" >Amount</label>
+		         <input type="text" name="amnt" id="amnt"  data-localize="name" value="" placeholder="Amount">
+
+		         
+				 <fieldset data-role="controlgroup">
+		        <legend>Check Memebers</legend>
+		        <input type="checkbox" name="checkbox-v-2a" id="checkbox-v-2a">
+		        <label for="checkbox-v-2a">Phani</label>
+		        <input type="checkbox" name="checkbox-v-2b" id="checkbox-v-2b">
+		        <label for="checkbox-v-2b">RK</label>
+		        <input type="checkbox" name="checkbox-v-2c" id="checkbox-v-2c">
+		        <label for="checkbox-v-2c">Srinu</label>
+		    	</fieldset>
+		    	<div class="select-ui">
+			    <label class='label-ui' data-localize="sel_role">Pay By</label>
+			   <select name="select-choice-1" id="sel_role">
+					    <option value="-1" selected> - Select Member - </option>
+						<option value="phani" selected> Phani </option>
+						<option value="rk" selected> RK </option>
+						<option value="srinu" selected> Srinu </option>			
+				</select>
+				
+				<span id="roleerror" class="err"></span> 
+			  </div>    
+
+		        
+
+				<button type="button" id="btn_register" data-theme="a" name="submit" value="submit-value" class="ui-btn ui-icon-carat-u ui-btn-icon-left login-one-btn"><span data-localize="register">Add</span></button>
+  	</div>
+
+			</form>
+
+		</div> 
+            
+	   <div class="clr"></div>
+	   
+	   <div class="rwd-example  search-result-one"><div class="search-num"><ul></ul></div>
+	   <div id='no_frnds' style="display:none">
+			<div class="alert alert-error"><span data-localize='no_frnds'>No Expenditures Available</span></div>
+		</div>
+	</div>
+     	 <div id="pagination"></div>
+
+     	  
+         
+    </div> 
+    		
+  		</div>  
+
+
+<div data-role="footer" class="footer">
+	    <ul>
+            
+	    <li><b>Room Expenditures v 1.0</b></li>
+	    <li><a href="tel:+91 9963083185" title="">Help: +919963083185</a></li>
+	    
+	    </ul>
+    </div> 
+<div id="includedContent"></div>
+ 
+</div><!-- /page -->
+
+</body>
+
+
+<HEAD>
+
+<META HTTP-EQUIV="PRAGMA" CONTENT="NO-CACHE">
+</HEAD>
+</html>
+
+    
