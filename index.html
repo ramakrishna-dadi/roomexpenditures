@@ -22,10 +22,10 @@
 
 	
 	<div class="aqua">
-		<a data-role="header" class="logo">
-			<!-- <p><img src="assets/images/logo12.jpg" title="" alt="" /></p> -->
-    		<h6><span data-localize="aqua-head">Room Expenditures</span></h6>
-		</a>
+		
+		 <div data-role="header">
+    	<h1>Welcome To Room Expenditures</h1>
+  			</div>
 
   		<div data-role="main" class="ui-content">
   		
@@ -36,9 +36,9 @@
   	<div data-role="main" class="ui-content data_div">
        
 		<h3>Details</span>
-		<a href="#" data-ajax="false" style='float:right;margin-top: 1px;'id='add_contact' class="ui-btn ui-btn-icon-left ui-icon-plus login-one-btn enhance">Add</a></h3>
+		<a href="#" data-ajax="false" style='float:right;margin-top: 1px;'id='add_expnd' class="ui-btn ui-btn-b ui-corner-all ui-shadow ui-icon-plus ui-btn-icon-left">Add</a></h3>
 <!-- style="display:none;" -->
-		<div id="add-expnd" style="display:none;">
+		<div id="add-expnd-div" style="display:none;">
 			<form action="" method="post" name="add-expnd-form" id="ad-expnd-form">
 
 				 <label class="label-ui" data-localize="name" >Descprition</label>
@@ -49,21 +49,21 @@
 
 		         
 				 <fieldset data-role="controlgroup">
-		        <legend>Check Memebers</legend>
-		        <input type="checkbox" name="checkbox-v-2a" id="checkbox-v-2a">
-		        <label for="checkbox-v-2a">Phani</label>
-		        <input type="checkbox" name="checkbox-v-2b" id="checkbox-v-2b">
-		        <label for="checkbox-v-2b">RK</label>
-		        <input type="checkbox" name="checkbox-v-2c" id="checkbox-v-2c">
-		        <label for="checkbox-v-2c">Srinu</label>
+		        <label class="label-ui">Check Memebers</label>
+		        <input type="checkbox" name="mems[]" id="phani">
+		        <label for="phani">Phani</label>
+		        <input type="checkbox" name="mems[]" id="rk">
+		        <label for="rk">RK</label>
+		        <input type="checkbox" name="mems[]" id="srinu">
+		        <label for="srinu">Srinu</label>
 		    	</fieldset>
 		    	<div class="select-ui">
-			    <label class='label-ui' data-localize="sel_role">Pay By</label>
-			   <select name="select-choice-1" id="sel_role">
-					    <option value="-1" selected> - Select Member - </option>
-						<option value="phani" selected> Phani </option>
-						<option value="rk" selected> RK </option>
-						<option value="srinu" selected> Srinu </option>			
+			    <label class='label-ui'>Pay By</label>
+			   <select name="pay_by" id="pay_by">
+					    <option value=""> - Select Member - </option>
+						<option value="phani"> Phani </option>
+						<option value="rk"> RK </option>
+						<option value="srinu"> Srinu </option>			
 				</select>
 				
 				<span id="roleerror" class="err"></span> 
@@ -71,7 +71,7 @@
 
 		        
 
-				<button type="button" id="btn_register" data-theme="a" name="submit" value="submit-value" class="ui-btn ui-icon-carat-u ui-btn-icon-left login-one-btn"><span data-localize="register">Add</span></button>
+				<button type="submit" id="btn_register" data-theme="a" name="submit" value="submit-value" class="ui-btn ui-btn-b ui-icon-carat-u ui-shadow ui-btn-icon-left"><span data-localize="register">Add</span></button>
   	</div>
 
 			</form>
@@ -90,19 +90,11 @@
      	  
          
     </div> 
-    		
+    		<div data-role="footer">
+    <h1>Room Expenditures v 1.0</h1>
+  </div>
   		</div>  
 
-
-<div data-role="footer" class="footer">
-	    <ul>
-            
-	    <li><b>Room Expenditures v 1.0</b></li>
-	    <li><a href="tel:+91 9963083185" title="">Help: +919963083185</a></li>
-	    
-	    </ul>
-    </div> 
-<div id="includedContent"></div>
  
 </div><!-- /page -->
 
