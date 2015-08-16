@@ -1,5 +1,9 @@
 
 $(document).ready(function(){
+
+    var url = "http://roomexpenditures-wpapp9.rhcloud.com/";
+
+
 	$('#add_expnd').on('click',function(){
 	$('#add-expnd-div').toggle();
 	});
@@ -40,31 +44,14 @@ $(document).ready(function(){
                 $.ajax({
                     type: "POST",
                      dataType:'json',
-                    url: "server/roomexp.php",
+                    url: url+"server/roomexp.php",
                     data: $(form).serialize(),
                     timeout: 3000,
                     success: function(data) {
-                        //alert(data);
-                        
-                        // if(data == 't') 
-                        // {
-                           
-                        //     $('.exists').html('');
-                        //     $('.exists').append('<div class="alert alert-danger"><strong>Already </strong>exists. Try another name</div>');
-                        //     scroll(0,0);
-                        // } 
-                        // else if(data == "IS") 
-                        // {
-                        //     location.href = "q-and-a-management.php?msg=addtsuc";
-                        // }
-                        // else if(data == "f") 
-                        // {
-                        //     location.href = "q-and-a-management.php?msg=addtfail";
-                        // }
+                       
                         if(data.success == true)
                         {
-                            //  location.href = '#page_home';
-                           // $.mobile.pageContainer.pagecontainer("change", "#page_home");
+                            
                            window.location = window.location + '#page_home';
                            window.location.reload();
                         }
@@ -83,7 +70,7 @@ $(document).ready(function(){
     $.ajax({
                     type: "POST",
                     dataType:'json',
-                    url: "server/roomexp.php",
+                    url: url+"server/roomexp.php",
                     data: {action:'load_expnd_list'},
                     timeout: 3000,
                     success: function(data) {
