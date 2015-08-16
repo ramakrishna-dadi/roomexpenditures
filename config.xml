@@ -1,0 +1,42 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="com.roomexpnd.build" version="1.0" versionCode = "11" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
+	<icon src="assets/images/logo12.png" />
+    <name>Room Expenditures</name>
+    <description>
+        Room Expenditures
+    </description>
+    <author email="dramakrishna0509@gmail.com" href="http://roomexpenditures-wpapp9.rhcloud.com/">
+        Ramakrishna
+    </author>
+	
+    <content src="index.html" />
+    <access origin="*" />
+    
+    <access subdomains="true" uri="http://roomexpenditures-wpapp9.rhcloud.com/" />
+
+    <preference name="permissions" value="none"/>
+    
+    
+     <gap:plugin name="org.apache.cordova.network-information" version="0.2.7" />
+   
+	 <gap:config-file platform="android" parent="/manifest">
+	    <uses-permission name="android.permission.ACCESS_NETWORK_STATE" />
+	 </gap:config-file>
+
+	 <gap:config-file platform="android" parent="/manifest">
+	    <uses-permission name="android.permission.INTERNET" />
+	 </gap:config-file>
+
+	 <gap:config-file platform="android" parent="/manifest">
+	    <uses-permission name="android.permission.READ_PHONE_STATE" />
+	 </gap:config-file>
+
+	 <feature name="http://api.phonegap.com/1.0/device" />
+	 <feature name="http://api.phonegap.com/1.0/network"/>
+	 <feature name="NetworkStatus">
+		    <param name="android-package" value="org.apache.cordova.NetworkManager" />
+		    <param name="ios-package" value="CDVConnection" />
+	 </feature>
+	 <gap:plugin name="org.apache.cordova.contacts" version="0.2.13" />
+    
+</widget>
