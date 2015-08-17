@@ -1,20 +1,21 @@
 
-$(document).ready(function(){
-
+$(document).on('pageinit', '#page_home', function(){ 
+alert('a');      
+    load_expnd_list();
     var url = "http://roomexpenditures-wpapp9.rhcloud.com/";
 
-	$('#ad-expnd-form').validate({
+    $('#ad-expnd-form').validate({
       
        rules:{
              desc:
              {
-             	required: true,
+                required: true,
                 minlength: 15
              },
              amnt:"required",
              "mems[]":
              {
-             	required: true,
+                required: true,
                 minlength: 2
              },
              "pay_by":"required"
@@ -22,13 +23,13 @@ $(document).ready(function(){
        messages:{
                 desc:
              {
-             	required: "Enter description minimum 15 characters",
+                required: "Enter description minimum 15 characters",
                 minlength: "Enter description minimum 15 characters"
              },
              amnt:"Enter Amount",
              "mems[]":
              {
-             	required: "Check the members",
+                required: "Check the members",
                 minlength: "Check atleast two members"
              },
              "pay_by":"Select who pay the amount"
@@ -58,10 +59,6 @@ $(document).ready(function(){
                 return false;
           }
          });
-});
-
-$(document).on('pageinit', '#page_home', function(){       
-    load_expnd_list();
 });
 
  function load_expnd_list()
