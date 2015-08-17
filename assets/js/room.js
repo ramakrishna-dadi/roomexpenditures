@@ -3,12 +3,6 @@ $(document).ready(function(){
 
     var url = "http://roomexpenditures-wpapp9.rhcloud.com/";
 
-
-	// $('#add_expnd').on('click',function(){
-	// $('#add-expnd-div').toggle();
-	// });
-
-
 	$('#ad-expnd-form').validate({
       
        rules:{
@@ -65,10 +59,15 @@ $(document).ready(function(){
           }
          });
 });
-var url = "http://roomexpenditures-wpapp9.rhcloud.com/";
+
+$(document).on('pageinit', '#page_home', function(){       
+    load_expnd_list();
+});
 
  function load_expnd_list()
  {
+    var url = "http://roomexpenditures-wpapp9.rhcloud.com/";
+
     $.ajax({
                     type: "POST",
                     dataType:'json',
