@@ -1,5 +1,5 @@
 
-$(document).ready(function(){
+$(document).bind('pageinit', function() {
 
     var url = "http://roomexpenditures-wpapp9.rhcloud.com/";
 
